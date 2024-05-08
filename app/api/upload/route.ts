@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: false });
   }
 
-  const dataDir = 'data';
+  const dataDir = './data';
   const dataDirExists = await directoryExists(dataDir);
 
   if (!dataDirExists) {
