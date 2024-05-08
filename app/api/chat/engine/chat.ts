@@ -1,4 +1,4 @@
-import { ContextChatEngine, Settings } from "llamaindex";
+import { ContextChatEngine, Settings, RetrieverQueryEngine } from "llamaindex";
 import { getDataSource } from "./index";
 
 export async function createChatEngine() {
@@ -12,6 +12,7 @@ export async function createChatEngine() {
   retriever.similarityTopK = process.env.TOP_K
     ? parseInt(process.env.TOP_K)
     : 3;
+  
 
   return new ContextChatEngine({
     chatModel: Settings.llm,

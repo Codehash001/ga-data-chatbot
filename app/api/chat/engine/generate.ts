@@ -1,4 +1,4 @@
-import { VectorStoreIndex } from "llamaindex";
+import { VectorStoreIndex , ChromaVectorStore } from "llamaindex";
 import { storageContextFromDefaults } from "llamaindex/storage/StorageContext";
 
 import * as dotenv from "dotenv";
@@ -28,7 +28,7 @@ async function generateDatasource() {
     await VectorStoreIndex.fromDocuments(documents, {
       storageContext,
     });
-  });
+  }); 
   console.log(`Storage context successfully generated in ${ms / 1000}s.`);
 }
 
