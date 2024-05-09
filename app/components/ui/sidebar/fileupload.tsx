@@ -156,7 +156,7 @@ const FileUpload = () => {
       <div className="flex-grow w-full items-start">
         {/* Additional content */}
       </div>
-      <Button variant='default' size='sm' className={uploading ? 'w-full opacity-45' : 'w-full'}><input type="submit" value={uploading ? "Creating dataset" : "Create dataset"} />
+      <Button variant='default' size='sm' className={uploading ? 'w-full opacity-45' : 'w-full'}><input type="submit" value={uploading ? "Feeding dataset" : "Feed dataset"} />
         {uploading ?
           <Loader size={18} className='ml-2 animate-spin' /> :
           <PackagePlus size={18} className='ml-2' />}
